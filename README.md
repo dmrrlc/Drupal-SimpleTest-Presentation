@@ -1,6 +1,4 @@
-Styleguide by default
-=====================
+presentation
+============
 
-URL : http://antistatique.github.io/slides-styleguide-by-default
-
-
+Base for Antistatique presentations

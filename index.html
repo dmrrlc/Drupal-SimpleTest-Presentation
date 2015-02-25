@@ -2,529 +2,101 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Generate Styleguides for Every Project</title>
+    <title>Antistatique presentation</title>
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-  <meta name="author" content="Marc Friederich">
-  <meta name="keyword" content="antistatique, web agency">
-  <meta name="description" content="Base presentation for Antistatique">
+    <meta name="author" content="Marc Friederich">
+    <meta name="keyword" content="antistatique, web agency">
+    <meta name="description" content="Base presentation for Antistatique">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="assets/revealjs/css/reveal.min.css">
-  <link rel="stylesheet" href="assets/revealjs/css/theme/serif.css" id="theme">
-  <link rel="stylesheet" href="assets/as.css">
-  <!-- <link rel="stylesheet" href="assets/code.css"> -->
-  <link rel="stylesheet" href="assets/revealjs/plugin/fullscreen-img.css">
-  <!-- For syntax highlighting -->
-  <link rel="stylesheet" href="assets/revealjs/lib/css/zenburn.css">
+    <link rel="stylesheet" href="assets/revealjs/css/reveal.min.css">
+    <link rel="stylesheet" href="assets/revealjs/css/theme/serif.css" id="theme">
+    <link rel="stylesheet" href="assets/as.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="assets/revealjs/lib/css/zenburn.css">
 
-  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-  <script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'css/print/pdf.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
-  </script>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="assets/revealjs/css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
 
-  <style type="text/css">
-    .reveal section img {
-      background: transparent;
-      border: none;
-      box-shadow: 0 0 0 transparent;
-    }
-  </style>
+    <style type="text/css">
+        .reveal section img {
+            background: transparent;
+            border: none;
+            box-shadow: 0 0 0 transparent;
+        }
+    </style>
 
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="reveal">
+<div class="reveal">
 
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
 
         <section>
-          <h1>Drupal SimpleTest</h1>
-          <aside class="notes">
-            Welcome to my presentation about having a generated styleguide as a living documentation for every project.
-            Today
-            - Understand what is a web styleguide
-            - Why using a styleguide make things easy
-            - And how easy it should be to setup a new project ("$yo styleguide")
-          </aside>
-        </section>
+            <h1>Drupal SimpleTest</h1>
+            <h5>Testing Drupal websites</h5>
 
-        <!-- Antistatique -->
-        <section>
-          <section>
-            <h2>Marc Friederich</h2>
-            <h4>
-              Software designer & co-founder of ...
-            </h4>
-            <p><a href="https://github.com/zufrieden" title="GitHub"><i class="icon-github-sign"></i> github.com/zufrieden</a></p>
-            <p><a href="https://twitter.com/zufrieden" title="Twitter"><i class="icon-twitter-sign"></i> @zufrieden</a></p>
-            <aside class="notes">
-              My name is Marc. I'm so positive that my twitter handle is Zufrieden. I'm a so-called software designer, meaning the UX guy who code and design working with HTML since 15 years (I'm getting old). I'm also co-founder of ...
-            </aside>
-          </section>
-          <section>
             <div class="antistatique">
-              <object data='assets//logo-antistatique.svg' style='height:80px; width:400px;' ></object>
+                <object data='assets//logo-antistatique.svg' style='height:20px; width:100px;'></object>
             </div>
-            <h3>swiss web agency</h3>
-            <h6>Digital first / User needs / Problem solving / Handcrafted quality / Ping pong</h6>
-            <p><a href="https://github.com/antistatique" title="GitHub"><i class="icon-github-sign"></i> github.com/antistatique</a></p>
-            <p><a href="https://twitter.com/antistatique" title="Twitter"><i class="icon-twitter-sign"></i> @antistatique</a></p>
-            <aside class="notes">
-              Antistatique. A web agency of about 10 people. Enjoying building digital strategy, web solutions focused on user needs.
-            </aside>
-          </section>
-          <section>
-            <a href="http://slidedeck.io">
-              <img src="img/slidedeck.png">
-            </a>
-            <aside class="notes">
-              Who is using HTML for his presentation ? Great !
-              So if you publish it on github, you'll be featured on slidedeck.io. One of our product at Antistatique.
-            </aside>
-          </section>
-          <section>
-            <a href="http://devicelab.ch">
-              <img src="img/devicelab.png">
-            </a>
-            <aside class="notes">
-              And Devicelab where I hope you'll come one day to test your applications, web products and newsletters (You'll find more devicelab address on opendevicelab.com). But we are not here to talk about me.
-            </aside>
-          </section>
         </section>
 
-        <!-- Introduction and Styleguide definition -->
         <section>
-          <section>
-            <h1>Awesome Generated web living styleguides</h1>
-            <h2 class="fragment">By default</h2>
-            <aside class="notes">
-              We're here to talk about Styleguides, neat, automated, digital, live. And why it should be the default.
-              Let's start with "styleguide definition" ...
-              But first. Raise your hand who already use webstyleguide ? generated ?
-            </aside>
-          </section>
-          <section>
-            <h2>Web styleguides definition</h2>
-            <blockquote>
-              <p>Web site style guides cover a publication's <span class="fragment highlight-red">visual and technical</span> aspects, along with text. Many style guides are <span class="fragment highlight-red">revised periodically</span> to accommodate changes in conventions and usage.</p>
-              <footer>
-                <small><span class="author"><a href="http://en.wikipedia.org/wiki/Styleguide">Wikipedia</a></span></small>
-              </footer>
-            </blockquote>
-            <aside class="notes">
-              A styleguide is a tool to set standards in how the brand identity is communicated.
-              Important in this definition is "visual and technical" and "revised periodically"
-            </aside>
-          </section>
-          <section data-background="img/boy_scouts_logos.png">
-            <aside class="notes">
-              This exemple from US boy scout showing how to use their logo.
-              What are the colours
-            </aside>
-          </section>
-          <section data-background="img/newyork_transport_styleguide.jpg">
-            <aside class="notes">
-              You may be familiar with those binders
-              This exemple from the New York transit authority 1970.
-              How you should use the different element
-            </aside>
-          </section>
-          <section data-background="img/lonelyplanet.png">
-            <aside class="notes">A web styleguide (as digital enter the game) it's interactive. For instance this is the the lonelyplanet online styleguide</aside>
-          </section>
-          <section data-background="img/lonelyplanet_2.png">
-            <aside class="notes">They provide ready to use components like you could find with bootstrap, foundation, pears etc ..
-              And now that we have the same understanding of web styleguides let's look at what problem are we solving ...</aside>
-            </section>
-          </section>
+            <section>
+                <h3>Antistatique is a swiss web agency providing handcrafted solutions</h3>
 
-          <!-- Generate styleguide dynamically and its benefit, how we went there -->
-          <section>
-            <section>
-              <h1>
-                Do we need a styleguide for every project?
-              </h1>
-              <aside class="notes">
-                Do we really need a styleguide for every project ...
-              </aside>
+                <p>
+                    <object data='assets/github.svg' style='height:50px; width:50px;'></object>
+                    <a href="https://github.com/antistatique" title="GitHub">github.com/antistatique</a></p>
+                <p>
+                    <object data='assets/twitter.svg' style='height:50px; width:50px;'></object>
+                    <a href="https://twitter.com/antistatique" title="Antistatique (antistatique) auf Twitter">@antistatique</a>
+                </p>
             </section>
             <section>
-              <h2>Let's go back 3 years ago ...</h2>
-              <aside class="notes">
-                I'd like to share my own experience and how we came from nothing to styleguide by default
-              </aside>
-            </section>
-            <section data-background="img/staff-antistatique-web.jpg">
-              <aside class="notes">
-                Those 2 guys are the designers, and those 3 there are coding CSS/HTML.
-                We were a team working together on the same code.
-              </aside>
-            </section>
-            <section data-background="img/client_team.jpg">
-              <aside class="notes">
-                Those guys are serious ! They are smiling
-                Then we won this big client, a real estate company! They have a website with a search engine, some landing pages and other websites dedicated to estate properties.
-              </aside>
-            </section>
-            <section data-background="img/client_website.png">
-              <aside class="notes">
-                They want the same design on all their websites, intranet and digital.
-                So we start by using the same CSS accross all websites
-              </aside>
+                <h1>Team</h1>
             </section>
             <section>
-              <pre>
-<code>
-ul.nav-main .nav-sub .nav-sub-top, ul.nav-language .nav-sub .nav-sub-top {}
-</code>
-              </pre>
-              <aside class="notes">
-                When we needed a new component to implement, we were writing new lines, to be sure not to breack anything
-                9000 lines of CSS, with no documentation, used accross 10 websites.
-                Main website with other landing page ... using the same CSS
-                Collaboration with in-house developers, the need for a documentation (which stay up to date).
-                - we needed to do something
-              </aside>
+                <h1>Team</h1>
             </section>
-            <section>
-              <ul>
-                <li>Duplicated code</li>
-                <li class="fragment">Dead code</li>
-                <li class="fragment">Communication problem</li>
-                <li class="fragment">Hard to test</li>
-              </ul>
-              <aside class="notes">
-                CSS copy past
-                Not used code (plugin)
-                Between designers and developpers
-                TESTing browser, RWD
-              </aside>
-            </section>
-            <section>
-              <h2>But How!?</h2>
-            </section>
-            <section>
-              <img src="img/snow_beach.jpg" alt="">
-              <aside class="notes">
-                I was looking for a solution ...
-                Lost, alone ... seeking north
-              </aside>
-            </section>
-            <section data-background="img/kyle_webshaped_2.png">
-              <aside class="notes">
-                In Helsinki, finland for the webshaped frontend conference, I saw this guy : Kyle ! He is working at Github. He was talking about how cool it is to have a documentation.
-                He caught my interest
-                Let's see how it works
-              </aside>
-            </section>
-            <section>
-              <pre>
-<code data-language="css">
-/*
-# Text components
-## Titles
-````
-<h1>My title number 1</h1>
-````
-*/
-
-h1{
-color: #262626;
-font-weight: 700;
-}
-</code>
-            </pre>
-            <aside class="notes">
-              You have your documentation with the code (like javadoc)
-              You create a structure with Markdown syntax (like github)
-              This exemple : a title H1.
-            </aside>
-          </section>
-          <section data-background="img/yss_demo.png">
-            <aside class="notes">
-              The generated documentation from the code shows titles etc ...
-            </aside>
-          </section>
-          <section>
-            <ul>
-              <li>Think before you code</li>
-              <li class="fragment">Communication designers/developers</li>
-              <li class="fragment">Envolve with your project</li>
-              <li class="fragment">Testing platform</li>
-              <li class="fragment">A better web!</li>
-            </ul>
-            <aside class="notes">full of benefits.
-              Document before you code, help you go modular
-              Styleguide first it's a perfect tool to communicate earlyer in the frontend coding process with the designer
-              A styleguide that envolve with your product
-              Testing responsive, accessibility, multiple browser</aside>
-            </section>
-            <section data-background="img/yss.png">
-              <aside class="notes">We tried some tool available (styledocco, KSS, KaleyStyleguide) and finally we built our own tool called : YSS</aside>
-            </section>
-            <section>
-             2 year later ...
-             <aside class="notes">
-               We used our tool for every project we had and start talking about it ....
-             </aside>
-           </section>
-           <section>
-            <h2>Hired to produce a web styleguide</h2>
-            <p>For Switzerland public administration</p>
-            <aside class="notes">
-              We only had to create the styleguide
-            </aside>
-          </section>
-          <section data-background="img/admin.png">
-            <aside class="notes">We had to produce a styleguide for all the administration websites. Meaning a large scale project with many actors</aside>
-          </section>
-          <section data-background="img/hologram.png">
-            <aside class="notes">We choose Hologram because more contributed than our YSS, still on markdown, same documentation syntax, themable.</aside>
-          </section>
-          <section data-background="img/hologram_3.png">
-            <aside class="notes">Now that you saw how useful it is to have a styleguide by default, let's see how easy it is to setup</aside>
-          </section>
+        </section>
+        <section>
         </section>
 
-        <!-- Convincend? - Use a generated styleguide for your poject, but how -->
         <section>
-          <section>
-            <h1>Styleguide by default</h1>
-            <h2 class="fragment">Use a generated living styleguide for your next project!</h2>
-          </section>
-          <section>
-            <h2>Make it default, make it easy!</h2>
-            <h3>Generate a styleguide from a generator</h3>
-          </section>
-          <section data-transition="none">
-            <img src="img/yo-styleguide_0.png" alt="">
-            <aside class="notes">
-              We use bootstrap as a base for every project, from a small website to a complexe application. It's a good base to start with. Tested in every browser, works well with a ccessibility. Don't reinvent the wheel ;-)
-            </aside>
-          </section>
-          <section data-transition="none">
-            <img src="img/yo-styleguide_1.png" alt="">
-            <aside class="notes">
-              We need also Bower to manage dependencies like bootstrap.
-              It allow us to update the project with ease
-            </aside>
-          </section>
-          <section data-transition="none">
-            <img src="img/yo-styleguide_2.png" alt="">
-            <aside class="notes">
-              Hologram as I showed you earlier.
-              Generate the webstyleguide from the code
-            </aside>
-          </section>
-          <section data-transition="none">
-            <img src="img/yo-styleguide_3.png" alt="">
-            <aside class="notes">
-              We created Holostrap, simply a bootstrap documentation adapted to Hologram. So right out of the box, you have all bootstrap components documented in your styleguide
-            </aside>
-          </section>
-          <section data-transition="none">
-            <img src="img/yo-styleguide_4.png" alt="">
-            <aside class="notes">
-              Then we created Cortana, a nice hologram theme with search capabilities
-            </aside>
-          </section>
-          <section data-transition="none">
-            <img src="img/yo-styleguide.png" alt="">
-            <aside class="notes">
-              And finally Gulp to manage task such as generate CSS from SASS, minimify css, launch hologram, deploy
-            </aside>
-          </section>
-          <section>
-            <a href="http://yeoman.io/"><img src="img/yo.gif" alt=""></a>
-            <aside class="notes">
-              And because it will takes 2 hours to setup all those tools, We created a Yeoman recipe.
-            </aside>
-          </section>
 
-          <section>
-<pre><code data-language="shell">
-$ yo styleguide
-</code></pre>
-            <aside class="notes">
-              Easy as .... this
-            </aside>
-          </section>
-          <section>
-            <img src="img/cl_yo_styleguide.gif" alt="">
-            <aside class="notes">
-              Yeoman asks you the name of the project and voilà ...
-            </aside>
-          </section>
-
-          <section>
-<pre><code data-language="markdown">
-.
-├── README.md
-├── assets
-├── bower.json
-├── gulpfile.js
-├── hologram_config.yml
-├── node_modules
-├── package.json
-└── robots.txt
-</code></pre>
-            <aside class="notes">
-              Here is the structure when Yeoman finished is first setup
-            </aside>
-          </section>
-          <section>
-<pre><code data-language="markdown">
-assets
-├── README.md
-├── doc_assets
-│   ├── _footer.html
-│   └── _header.html
-├── fonts
-├── js
-│   └── FEC14.js
-└── sass
-├── FEC14-mixins.scss
-├── FEC14-variables.scss
-├── FEC14.scss
-├── bootstrap-variables.scss
-├── bootstrap.scss
-├── components
-├── javascript
-└── layout
-</code></pre>
-            <aside class="notes">
-              Taking a closer look to the assets directory, you see where you will start to work, changing bootstrap variable and start implementing/documenting your first modular components
-            </aside>
-          </section>
-
-          <section class="text-left">
-            <p>
-              hologram_config.yml
-            </p>
-<pre><code>
-source: ./assets
-
-destination: ./styleguide
-
-documentation_assets: ./bower_components/Cortana
-
-dependencies:
-- ./build
-
-css_include:
-- 'css/FEC14.css'
-
-index: README
-</code></pre>
-            <aside class="notes">
-              Hologram configuation says. Look at assets folder, generate the styleguide in styleguide folder using Cortana theme
-            </aside>
-          </section>
-
-          <section>
-<pre><code data-language="shell">
-$ gulp serve
-</code></pre>
-          </section>
-
-          <section>
-            <img src="img/cl_yo_styleguide_3.gif" alt="">
-            <aside class="notes">
-              See it in action, we're changing primary color from blue to green
-            </aside>
-          </section>
-
-          <section>
-            <h1>Workflow</h1>
-          </section>
-
-          <section class="text-left">
-            <ol>
-              <li><b>Yeoman</b> scaffolding</li>
-              <li class="fragment">Dependencies managment with <b>npm</b> and <b>Bower</b></li>
-              <li class="fragment">Running tasks with <b>Gulp</b> serve with <b>BrowserSync</b></li>
-              <li class="fragment">Modular styles inside the styleguide</li>
-              <li class="fragment">4 again and again...</li>
-            </ol>
-          </section>
         </section>
 
-        <!-- project process implications -->
         <section>
-          <section>
-            <h1>To conclude</h1>
-            <aside class="notes">
-              What I would like you to remember from this talk is ...
-            </aside>
-          </section>
-          <section class="text-left">
-            <ol>
-              <li>Start with a styleguide</li>
-              <li class="fragment">Communicate more often</li>
-              <li class="fragment">Develop future proof</li>
-              <li class="fragment">Think modular first</li>
-              <li class="fragment">Contribute! It's open source!</li>
-            </ol>
-          </section>
-          <section data-background="img/future_friendly.jpg">
-            <h3 style="color:#fff">Give it a try</h3>
-          </section>
-        </section>
-
-        <!-- Thank you -->
-        <section>
-          <section>
             <h1>Thank you</h1>
-          </section>
-          <section>
-            <h1>Questions?</h1>
-            <p>Find this presentation on <a href="http://slidedeck.io/antistatique" title="None">slidedeck.io/antistatique</a> or <a href="http://antistatique.github.io/slides-styleguide-by-default">antistatique.github.io/slides-styleguide-by-default</a></p>
-          </section>
-          <section>
-            <h3>Sources</h3>
-            <ul>
-              <li><a href="https://github.com/tonifisler/generator-styleguide">Yeoman Styleguide Generator</a></li>
-              <li><a href="http://trulia.github.io/hologram/">Hologram</a></li>
-              <li><a href="https://github.com/yago/Holostrap">Holostrap</a></li>
-              <li><a href="https://github.com/yago/Cortana">Cortana</a></li>
-              <li><a href="https://vimeo.com/49596147">Kyle Webshaped Helsinki</a></li>
-              <li><a href="http://rizzo.lonelyplanet.com/styleguide">LonelyPlanet Styleguide</a></li>
-              <li><a href="http://antistatique.github.io/styleguide">Antistatique Styleguide</a></li>
-            </ul>
-          </section>
-
         </section>
-
-      </div>
 
     </div>
 
-    <script src="assets/revealjs/lib/js/head.min.js"></script>
-    <script src="assets/revealjs/js/reveal.min.js"></script>
-    <!-- <script src="assets/rainbow/rainbow.js"></script> -->
+</div>
 
-    <script>
+<script src="assets/revealjs/lib/js/head.min.js"></script>
+<script src="assets/revealjs/js/reveal.min.js"></script>
 
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
         controls: true,
         progress: true,
         history: true,
@@ -535,18 +107,42 @@ $ gulp serve
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-        { src: 'assets/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'assets/revealjs/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'assets/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'assets/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'assets/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'assets/revealjs/plugin/fullscreen-img/fullscreen-img.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'assets/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-          ]
-        });
+            {
+                src: 'assets/revealjs/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'assets/revealjs/plugin/markdown/showdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'assets/revealjs/plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'assets/revealjs/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'assets/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'assets/revealjs/plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
 
-      </script>
-    </body>
-    </html>
+</script>
+youpi
+</body>
+</html>
