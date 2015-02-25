@@ -46,6 +46,9 @@ body {
   font-size: 3em;
   color: #D40B6B;}
 
+.reveal .magenta {
+    color: #D40B6B;}
+
 .reveal blockquote{
   color: #444;
   font-size: 1.5em;
